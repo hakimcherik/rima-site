@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rima Chérik - Marketing Digital & Communication</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6C63FF",
+              secondary: "#4F46E5",
+              dark: "#1E1E2C",
+              light: "#F8F9FA",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.5s ease-in-out",
+              "slide-up": "slideUp 0.5s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #f8f9fa;
+        color: #1e1e2c;
+      }
+      
+      .portait {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 4px solid #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #6c63ff;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover:after {
+        width: 100%;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .language-switcher {
+        transition: all 0.3s ease;
+      }
+
+      .language-switcher:hover {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        .mobile-menu {
+          transform: translateX(-100%);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu.active {
+          transform: translateX(0);
+        }
+        .image1 img {
+          width: 200%;
+          height: 200%;
+          border-radius: 80px;
+        }
+      }
+    </style>
+  </head>
+  
+  <body class="antialiased">
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 flex space-x-2">
+      <button
+        id="lang-fr"
+        class="language-switcher bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md font-medium text-primary border border-primary"
+      >
+        FR
+      </button>
+      <button
+        id="lang-en"
+        class="language-switcher bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md font-medium text-gray-600"
+      >
+        EN
+      </button>
+    </div>
+
+    <!-- Navigation -->
+        </div>
+            <div class="image1">
+            <img src="images/Blue Gold Elegant Minimalist Digital Marketer LinkedIn Banner.png" alt="Rima cherik">
+    </div>
+    </div>
+
+    <nav class="bg-white shadow-sm fixed w-full z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a
+              href="#home"
+              class="text-xl font-bold text-primary flex items-center"
+            >
+              <span class="ml-2">Rima Chérik</span>
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-dark font-medium"
+              data-i18n="nav.home"
+              >Accueil</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-dark font-medium"
+              data-i18n="nav.about"
+              >À propos</a
+            >
+            <a
+              href="#services"
+              class="nav-link text-dark font-medium"
+              data-i18n="nav.services"
+              >Services</a
+            >
+            <a
+              href="#portfolio"
+              class="nav-link text-dark font-medium"
+              data-i18n="nav.portfolio"
+              >Portfolio</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-dark font-medium"
+              data-i18n="nav.contact"
+              >Contact</a
+            >
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-dark focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu md:hidden fixed inset-0 bg-white z-30 pt-16 px-4 overflow-y-auto"
+    >
+      <div class="flex flex-col space-y-6 py-8">
+        <a
+          href="#home"
+          class="nav-link text-dark font-medium text-lg"
+          data-i18n="nav.home"
+          >Accueil</a
+        >
+        <a
+          href="#about"
+          class="nav-link text-dark font-medium text-lg"
+          data-i18n="nav.about"
+          >À propos</a
+        >
+        <a
+          href="#services"
+          class="nav-link text-dark font-medium text-lg"
+          data-i18n="nav.services"
+          >Services</a
+        >
+        <a
+          href="#portfolio"
+          class="nav-link text-dark font-medium text-lg"
+          data-i18n="nav.portfolio"
+          >Portfolio</a
+        >
+        <a
+          href="#contact"
+          class="nav-link text-dark font-medium text-lg"
+          data-i18n="nav.contact"
+          >Contact</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50"
+    >
+         <img class="portait" src="images/5cb88614-4450-4b8f-9e45-d407dd640aa8.jpg" alt="Rima Chérik" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-xl"/>
+
+      <div class="max-w-7xl mx-auto">
+        <div class="md:flex items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-6"
+              data-i18n="hero.title"
+            >
+              Boostez Votre Présence Digitale
+            </h1>
+            <p
+              class="text-lg md:text-xl text-gray-600 mb-8"
+              data-i18n="hero.subtitle"
+            >
+              Stratégies de marketing digital sur mesure pour propulser votre
+              visibilité en ligne et convertir votre audience.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-lg"
+                data-i18n="hero.cta"
+                >Contactez-moi</a
+              >
+              <a
+                href="#services"
+                class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition duration-300"
+                data-i18n="hero.services"
+                >Mes services</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center animate-slide-up">
+            <div class="relative">
+              <div
+                class="w-64 h-64 md:w-80 md:h-80 bg-primary rounded-full opacity-10 absolute -top-6 -left-6"
+              ></div>
+              <div></div>
+              <img
+                src="images/1750242464608.jfif"
+                alt="Rima Chérik"
+                class="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-dark mb-4"
+            data-i18n="about.title"
+          >
+            À propos de moi
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        <div class="md:flex items-center">
+          <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+            <img
+              src="images/e7f06301-d041-4ecd-8503-f42cf0947bc2.png"
+              alt="Rima Chérik"
+              class="w-64 h-64 object-cover rounded-full border-4 border-white shadow-lg"
+            />
+          </div>
+          <div class="md:w-2/3 md:pl-16">
+            <h3
+              class="text-2xl font-bold text-dark mb-6"
+              data-i18n="about.subtitle"
+            >
+              Rima Chérik - Experte en Marketing Digital
+            </h3>
+            <p class="text-gray-600 mb-6" data-i18n="about.text1">
+              Basée à Paris, je suis spécialisée dans la création de stratégies
+              digitales efficaces pour les entreprises et les professionnels
+              souhaitant renforcer leur présence en ligne.
+            </p>
+            <p class="text-gray-600 mb-8" data-i18n="about.text2">
+              Avec une expertise en SEO, SEA, personal branding et gestion des
+              réseaux sociaux, j'accompagne mes clients dans l'élaboration de
+              stratégies sur-mesure pour atteindre leurs objectifs commerciaux.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div class="bg-light p-4 rounded-lg shadow-sm">
+                <div class="text-primary text-2xl mb-2">
+                  <i class="fas fa-search"></i>
+                </div>
+                <h4 class="font-bold text-dark" data-i18n="about.stats1">
+                  SEO/SEA
+                </h4>
+                <p class="text-gray-600 text-sm" data-i18n="about.stats1_desc">
+                  Optimisation & Publicité
+                </p>
+              </div>
+              <div class="bg-light p-4 rounded-lg shadow-sm">
+                <div class="text-primary text-2xl mb-2">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h4 class="font-bold text-dark" data-i18n="about.stats2">
+                  Réseaux Sociaux
+                </h4>
+                <p class="text-gray-600 text-sm" data-i18n="about.stats2_desc">
+                  Gestion & Stratégie
+                </p>
+              </div>
+              <div class="bg-light p-4 rounded-lg shadow-sm">
+                <div class="text-primary text-2xl mb-2">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+                <h4 class="font-bold text-dark" data-i18n="about.stats3">
+                  Création Visuelle
+                </h4>
+                <p class="text-gray-600 text-sm" data-i18n="about.stats3_desc">
+                  Design & Identité
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-dark mb-4"
+            data-i18n="services.title"
+          >
+            Mes Services
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 hover:border-primary border border-transparent"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-dark mb-4"
+              data-i18n="services.service1.title"
+            >
+              SEO & SEA
+            </h3>
+            <p class="text-gray-600 mb-6" data-i18n="services.service1.desc">
+              Optimisation pour les moteurs de recherche et gestion de campagnes
+              publicitaires payantes pour maximiser votre visibilité en ligne.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service1.item1"
+                  >Audit SEO complet</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service1.item2"
+                  >Optimisation technique</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service1.item3"
+                  >Gestion Google Ads</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 hover:border-primary border border-transparent"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-dark mb-4"
+              data-i18n="services.service2.title"
+            >
+              Gestion des Réseaux Sociaux
+            </h3>
+            <p class="text-gray-600 mb-6" data-i18n="services.service2.desc">
+              Stratégie et gestion complète de vos réseaux sociaux pour engager
+              votre audience et développer votre communauté.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service2.item1"
+                  >Stratégie éditoriale</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service2.item2"
+                  >Création de contenu</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service2.item3"
+                  >Analyse de performance</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 hover:border-primary border border-transparent"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-dark mb-4"
+              data-i18n="services.service3.title"
+            >
+              Personal Branding
+            </h3>
+            <p class="text-gray-600 mb-6" data-i18n="services.service3.desc">
+              Développement de votre image de marque personnelle pour vous
+              positionner comme expert dans votre domaine.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service3.item1"
+                  >Positionnement stratégique</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service3.item2"
+                  >Stratégie de contenu</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service3.item3"
+                  >Optimisation LinkedIn</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 hover:border-primary border border-transparent"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-dark mb-4"
+              data-i18n="services.service4.title"
+            >
+              Création Visuelle
+            </h3>
+            <p class="text-gray-600 mb-6" data-i18n="services.service4.desc">
+              Design graphique et création d'éléments visuels percutants pour
+              renforcer votre identité de marque.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service4.item1"
+                  >Identité visuelle</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service4.item2"
+                  >Design de publications</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service4.item3"
+                  >Charte graphique</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 hover:border-primary border border-transparent"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-edit"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-dark mb-4"
+              data-i18n="services.service5.title"
+            >
+              Stratégie Éditoriale
+            </h3>
+            <p class="text-gray-600 mb-6" data-i18n="services.service5.desc">
+              Planification et création de contenu pertinent pour votre audience
+              cible et vos objectifs marketing.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service5.item1"
+                  >Calendrier éditorial</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service5.item2"
+                  >Rédaction de contenu</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service5.item3"
+                  >Optimisation SEO</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300 hover:border-primary border border-transparent"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3
+              class="text-xl font-bold text-dark mb-4"
+              data-i18n="services.service6.title"
+            >
+              Stratégie Marketing
+            </h3>
+            <p class="text-gray-600 mb-6" data-i18n="services.service6.desc">
+              Élaboration de plans marketing complets alignés avec vos objectifs
+              business et votre public cible.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service6.item1"
+                  >Analyse de marché</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service6.item2">Plan d'action</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                <span data-i18n="services.service6.item3">Suivi des KPI</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section
+      id="portfolio"
+      class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-dark mb-4"
+            data-i18n="portfolio.title"
+          >
+            Mon Portfolio
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="portfolio-item overflow-hidden rounded-lg shadow-md group"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Projet SEO"
+                class="w-full h-64 object-cover transition duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white font-medium px-6 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-primary transition duration-300"
+                  data-i18n="portfolio.view"
+                  >Voir le projet</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-dark mb-2"
+                data-i18n="portfolio.project1.title"
+              >
+                Optimisation SEO
+              </h3>
+              <p class="text-gray-600" data-i18n="portfolio.project1.desc">
+                Stratégie SEO complète pour une entreprise de e-commerce
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="portfolio-item overflow-hidden rounded-lg shadow-md group"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                alt="Campagne réseaux sociaux"
+                class="w-full h-64 object-cover transition duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white font-medium px-6 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-primary transition duration-300"
+                  data-i18n="portfolio.view"
+                  >Voir le projet</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-dark mb-2"
+                data-i18n="portfolio.project2.title"
+              >
+                Campagne Réseaux Sociaux
+              </h3>
+              <p class="text-gray-600" data-i18n="portfolio.project2.desc">
+                Gestion complète des réseaux sociaux pour une marque de luxe
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="portfolio-item overflow-hidden rounded-lg shadow-md group"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Personal Branding"
+                class="w-full h-64 object-cover transition duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <a
+                  href="#"
+                  class="text-white font-medium px-6 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-primary transition duration-300"
+                  data-i18n="portfolio.view"
+                  >Voir le projet</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3
+                class="text-xl font-bold text-dark mb-2"
+                data-i18n="portfolio.project3.title"
+              >
+                Personal Branding
+              </h3>
+              <p class="text-gray-600" data-i18n="portfolio.project3.desc">
+                Développement de l'image de marque d'un entrepreneur
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-block bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg font-medium transition duration-300 shadow-lg"
+            data-i18n="portfolio.cta"
+            >Voir plus de projets</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-dark mb-4"
+            data-i18n="testimonials.title"
+          >
+            Témoignages
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p
+              class="text-gray-600 mb-6 italic"
+              data-i18n="testimonials.testimonial1.text"
+            >
+              "Rima a complètement transformé notre présence en ligne. En
+              quelques mois, notre trafic organique a augmenté de 150% grâce à
+              sa stratégie SEO."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/43.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4
+                  class="font-bold text-dark"
+                  data-i18n="testimonials.testimonial1.name"
+                >
+                  Sophie Martin
+                </h4>
+                <p
+                  class="text-gray-500 text-sm"
+                  data-i18n="testimonials.testimonial1.position"
+                >
+                  Directrice Marketing, LuxeParis
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p
+              class="text-gray-600 mb-6 italic"
+              data-i18n="testimonials.testimonial2.text"
+            >
+              "La stratégie de réseaux sociaux développée par Rima nous a permis
+              de doubler notre audience et d'augmenter significativement nos
+              ventes en ligne."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4
+                  class="font-bold text-dark"
+                  data-i18n="testimonials.testimonial2.name"
+                >
+                  Thomas Leroy
+                </h4>
+                <p
+                  class="text-gray-500 text-sm"
+                  data-i18n="testimonials.testimonial2.position"
+                >
+                  CEO, ModeFuture
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 text-xl mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p
+              class="text-gray-600 mb-6 italic"
+              data-i18n="testimonials.testimonial3.text"
+            >
+              "Grâce au personal branding de Rima, j'ai pu me positionner comme
+              expert dans mon domaine et attirer des clients premium."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="images/IMG20240720152647.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4
+                  class="font-bold text-dark"
+                  data-i18n="testimonials.testimonial3.name"
+                >
+                  Élodie Dubois
+                </h4>
+                <p
+                  class="text-gray-500 text-sm"
+                  data-i18n="testimonials.testimonial3.position"
+                >
+                  Consultante en Management
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-dark mb-4"
+            data-i18n="contact.title"
+          >
+            Contactez-moi
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        <div class="md:flex">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+            <h3
+              class="text-2xl font-bold text-dark mb-6"
+              data-i18n="contact.subtitle"
+            >
+              Travaillons ensemble
+            </h3>
+            <p class="text-gray-600 mb-8" data-i18n="contact.text">
+              Vous avez un projet ou des questions sur mes services ? N'hésitez
+              pas à me contacter via le formulaire ou directement par email ou
+              téléphone.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="text-primary text-xl mr-4 mt-1">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4
+                    class="font-bold text-dark mb-1"
+                    data-i18n="contact.address.title"
+                  >
+                    Adresse
+                  </h4>
+                  <p class="text-gray-600" data-i18n="contact.address.text">
+                    Paris, France
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-primary text-xl mr-4 mt-1">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4
+                    class="font-bold text-dark mb-1"
+                    data-i18n="contact.email.title"
+                  >
+                    Email
+                  </h4>
+                  <p class="text-gray-600">contact@rimacherik.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-primary text-xl mr-4 mt-1">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <h4
+                    class="font-bold text-dark mb-1"
+                    data-i18n="contact.phone.title"
+                  >
+                    Téléphone
+                  </h4>
+                  <p class="text-gray-600">+33 6 12 34 56 78</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-10">
+              <h4
+                class="font-bold text-dark mb-4"
+                data-i18n="contact.social.title"
+              >
+                Suivez-moi
+              </h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="bg-gray-100 hover:bg-primary hover:text-white w-10 h-10 rounded-full flex items-center justify-center text-gray-600 transition duration-300"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-gray-100 hover:bg-primary hover:text-white w-10 h-10 rounded-full flex items-center justify-center text-gray-600 transition duration-300"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-gray-100 hover:bg-primary hover:text-white w-10 h-10 rounded-full flex items-center justify-center text-gray-600 transition duration-300"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-gray-100 hover:bg-primary hover:text-white w-10 h-10 rounded-full flex items-center justify-center text-gray-600 transition duration-300"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <form class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-gray-700 font-medium mb-2"
+                    data-i18n="contact.form.name"
+                    >Nom complet</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    data-i18n="contact.form.email"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="subject"
+                  class="block text-gray-700 font-medium mb-2"
+                  data-i18n="contact.form.subject"
+                  >Sujet</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  data-i18n="contact.form.message"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-lg"
+                data-i18n="contact.form.submit"
+              >
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 px-4 sm:px-6 lg:px-8 text-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="md:flex md:justify-between">
+          <div class="mb-8 md:mb-0">
+            <a href="#" class="text-2xl font-bold text-white">Rima Chérik</a>
+            <p class="mt-4 text-gray-300 max-w-xs" data-i18n="footer.text">
+              Experte en marketing digital et communication basée à Paris,
+              spécialisée en SEO, SEA, personal branding et stratégie digitale.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-lg font-bold mb-4" data-i18n="footer.links.title">
+                Liens rapides
+              </h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#home"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="nav.home"
+                    >Accueil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="nav.about"
+                    >À propos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="nav.services"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#portfolio"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="nav.portfolio"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="nav.contact"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-lg font-bold mb-4"
+                data-i18n="footer.services.title"
+              >
+                Services
+              </h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="services.service1.title"
+                    >SEO & SEA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="services.service2.title"
+                    >Réseaux Sociaux</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="services.service3.title"
+                    >Personal Branding</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="services.service4.title"
+                    >Création Visuelle</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold mb-4" data-i18n="footer.legal.title">
+                Légal
+              </h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="footer.legal.privacy"
+                    >Politique de confidentialité</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="footer.legal.terms"
+                    >Conditions d'utilisation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-300 hover:text-white transition duration-300"
+                    data-i18n="footer.legal.cookies"
+                    >Politique des cookies</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-300 mb-4 md:mb-0" data-i18n="footer.copyright">
+            © 2025 Rima Chérik. Tous droits réservés.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+    
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a link
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      // Language switcher
+      const langFr = document.getElementById("lang-fr");
+      const langEn = document.getElementById("lang-en");
+
+      // English translations
+      const translations = {
+        en: {
+          "hero.title": "Boost Your Digital Presence",
+          "hero.subtitle":
+            "Custom digital marketing strategies to enhance your online visibility and convert your audience.",
+          "hero.cta": "Contact Me",
+          "hero.services": "My Services",
+          "nav.home": "Home",
+          "nav.about": "About",
+          "nav.services": "Services",
+          "nav.portfolio": "Portfolio",
+          "nav.contact": "Contact",
+          "about.title": "About Me",
+          "about.subtitle": "Rima Chérik - Digital Marketing Expert",
+          "about.text1":
+            "Based in Paris, I specialize in creating effective digital strategies for businesses and professionals looking to strengthen their online presence.",
+          "about.text2":
+            "With expertise in SEO, SEA, personal branding and social media management, I support my clients in developing tailor-made strategies to achieve their business goals.",
+          "about.stats1": "SEO/SEA",
+          "about.stats1_desc": "Optimization & Advertising",
+          "about.stats2": "Social Media",
+          "about.stats2_desc": "Management & Strategy",
+          "about.stats3": "Visual Creation",
+          "about.stats3_desc": "Design & Identity",
+          "services.title": "My Services",
+          "services.service1.title": "SEO & SEA",
+          "services.service1.desc":
+            "Search engine optimization and paid advertising campaign management to maximize your online visibility.",
+          "services.service1.item1": "Complete SEO audit",
+          "services.service1.item2": "Technical optimization",
+          "services.service1.item3": "Google Ads management",
+          "services.service2.title": "Social Media Management",
+          "services.service2.desc":
+            "Comprehensive strategy and management of your social networks to engage your audience and grow your community.",
+          "services.service2.item1": "Editorial strategy",
+          "services.service2.item2": "Content creation",
+          "services.service2.item3": "Performance analysis",
+          "services.service3.title": "Personal Branding",
+          "services.service3.desc":
+            "Development of your personal brand image to position yourself as an expert in your field.",
+          "services.service3.item1": "Strategic positioning",
+          "services.service3.item2": "Content strategy",
+          "services.service3.item3": "LinkedIn optimization",
+          "services.service4.title": "Visual Creation",
+          "services.service4.desc":
+            "Graphic design and creation of impactful visual elements to strengthen your brand identity.",
+          "services.service4.item1": "Visual identity",
+          "services.service4.item2": "Post design",
+          "services.service4.item3": "Graphic charter",
+          "services.service5.title": "Editorial Strategy",
+          "services.service5.desc":
+            "Planning and creation of relevant content for your target audience and your marketing objectives.",
+          "services.service5.item1": "Editorial calendar",
+          "services.service5.item2": "Content writing",
+          "services.service5.item3": "SEO optimization",
+          "services.service6.title": "Marketing Strategy",
+          "services.service6.desc":
+            "Development of comprehensive marketing plans aligned with your business objectives and target audience.",
+          "services.service6.item1": "Market analysis",
+          "services.service6.item2": "Action plan",
+          "services.service6.item3": "KPI tracking",
+          "portfolio.title": "My Portfolio",
+          "portfolio.view": "View Project",
+          "portfolio.project1.title": "SEO Optimization",
+          "portfolio.project1.desc":
+            "Complete SEO strategy for an e-commerce business",
+          "portfolio.project2.title": "Social Media Campaign",
+          "portfolio.project2.desc":
+            "Complete social media management for a luxury brand",
+          "portfolio.project3.title": "Personal Branding",
+          "portfolio.project3.desc":
+            "Development of an entrepreneur's brand image",
+          "portfolio.cta": "View More Projects",
+          "testimonials.title": "Testimonials",
+          "testimonials.testimonial1.text":
+            '"Rima completely transformed our online presence. Within a few months, our organic traffic increased by 150% thanks to her SEO strategy."',
+          "testimonials.testimonial1.name": "Sophie Martin",
+          "testimonials.testimonial1.position": "Marketing Director, LuxeParis",
+          "testimonials.testimonial2.text":
+            '"The social media strategy developed by Rima allowed us to double our audience and significantly increase our online sales."',
+          "testimonials.testimonial2.name": "Thomas Leroy",
+          "testimonials.testimonial2.position": "CEO, ModeFuture",
+          "testimonials.testimonial3.text":
+            '"Thanks to Rima\'s personal branding, I was able to position myself as an expert in my field and attract premium clients."',
+          "testimonials.testimonial3.name": "Élodie Dubois",
+          "testimonials.testimonial3.position": "Management Consultant",
+          "contact.title": "Contact Me",
+          "contact.subtitle": "Let's Work Together",
+          "contact.text":
+            "Do you have a project or questions about my services? Feel free to contact me via the form or directly by email or phone.",
+          "contact.address.title": "Address",
+          "contact.address.text": "Paris, France",
+          "contact.email.title": "Email",
+          "contact.phone.title": "Phone",
+          "contact.social.title": "Follow Me",
+          "contact.form.name": "Full Name",
+          "contact.form.email": "Email",
+          "contact.form.subject": "Subject",
+          "contact.form.message": "Message",
+          "contact.form.submit": "Send Message",
+          "footer.text":
+            "Digital marketing and communication expert based in Paris, specialized in SEO, SEA, personal branding and digital strategy.",
+          "footer.links.title": "Quick Links",
+          "footer.services.title": "Services",
+          "footer.legal.title": "Legal",
+          "footer.legal.privacy": "Privacy Policy",
+          "footer.legal.terms": "Terms of Service",
+          "footer.legal.cookies": "Cookie Policy",
+          "footer.copyright": "© 2023 Rima Chérik. All rights reserved.",
+        },
+      };
+
+      langFr.addEventListener("click", () => {
+        document.documentElement.lang = "fr";
+        langFr.classList.add("text-primary", "border-primary");
+        langFr.classList.remove("text-gray-600");
+        langEn.classList.add("text-gray-600");
+        langEn.classList.remove("text-primary", "border-primary");
+
+        // Reset all texts to French (default)
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          element.textContent =
+            element.dataset.defaultText || element.textContent;
+        });
+      });
+
+      langEn.addEventListener("click", () => {
+        document.documentElement.lang = "en";
+        langEn.classList.add("text-primary", "border-primary");
+        langEn.classList.remove("text-gray-600");
+        langFr.classList.add("text-gray-600");
+        langFr.classList.remove("text-primary", "border-primary");
+
+        // Translate to English
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          if (translations.en[key]) {
+            // Store the original French text if not already stored
+            if (!element.dataset.defaultText) {
+              element.dataset.defaultText = element.textContent;
+            }
+            element.textContent = translations.en[key];
+          }
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Store default French texts on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          element.dataset.defaultText = element.textContent;
+        });
+      });
+    </script>
+  </body>
+</html>
